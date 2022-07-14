@@ -1,6 +1,6 @@
 package com.xyzcorp
 
-object ImplicitBind extends App {
+object ServiceBindManual extends App {
 
   import scala.concurrent._
   import java.util.concurrent.Executors
