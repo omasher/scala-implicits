@@ -12,5 +12,5 @@ object SummonBinding extends App {
   }
 
   println(orderIceCream(4))
-  println((orderIceCream(4)(IceCream("Rocky Road"))))
+  println(orderIceCream(4)(IceCream("Rocky Road")))
 }

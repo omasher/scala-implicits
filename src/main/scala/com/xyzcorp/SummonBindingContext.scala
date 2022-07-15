@@ -1,9 +1,5 @@
 package com.xyzcorp
 
-case class IceCream(name: String)
-
-case class Scoops(num: Int, flavor: IceCream)
-
 object SummonBindingContext extends App {
   implicit val flavorOfTheMonth: IceCream = IceCream("Rainbow Sherbet")
   implicit val listOfStrings: List[String] = List("Foo", "Bar", "Baz")
