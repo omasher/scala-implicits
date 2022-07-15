@@ -18,4 +18,11 @@ object DefaultImplicits extends App {
   println(30.toHexString)
 
   println(BigInt("2023949239324") + 10)
+
+  println(BigInt("2023949239324") + 10)
+  println(BigInt("2023949239324") - 10)
+  println(BigInt("2023949239324").pow(3))
+
+  //Using a BigInt range
+  BigInt("3023020233") to BigInt("3023020239") foreach (println)
 }
