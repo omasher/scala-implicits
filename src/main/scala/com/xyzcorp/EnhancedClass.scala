@@ -10,7 +10,9 @@ object EnhancedClass extends App {
 
   import scala.language.implicitConversions
 
-  implicit def int2IntWrapper(x: Int): IntWrapper = new IntWrapper(x)
+//  implicit def int2IntWrapper(x: Int): IntWrapper = new IntWrapper(x)
+
+  implicit val int2IntWrapper: Int => IntWrapper = (x: Int) => new IntWrapper(x)
 
   println(10.isOdd)
   println(10.isEven)
