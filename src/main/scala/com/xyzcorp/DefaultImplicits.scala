@@ -16,4 +16,6 @@ object DefaultImplicits extends App {
 
   //toHexString is a method in RichInt
   println(30.toHexString)
+
+  println(BigInt("2023949239324") + 10)
 }
