@@ -1,5 +1,9 @@
 package com.xyzcorp
 
+import scala.jdk.CollectionConverters._
+import java.time
+import java.time.ZoneId
+
 object DefaultImplicits extends App {
   val m = 1 -> "One"
   println(m)
@@ -25,4 +29,13 @@ object DefaultImplicits extends App {
 
   //Using a BigInt range
   BigInt("3023020233") to BigInt("3023020239") foreach (println)
+
+  val availableAfricanZoneIds = ZoneId.getAvailableZoneIds
+    .asScala
+    .toSet
+    .filter(s => s.startsWith("Africa"))
+    .map(s => s.split("/").last)
+    .toList
+    .sorted
+  println(availableAfricanZoneIds)
 }
